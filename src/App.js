@@ -1,18 +1,18 @@
 import React, {Fragment} from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
-import CategotiasProvider from './context/CategoriasContext';
+import CategoriasProvider from './context/CategoriasContext';
 
-function App() {
+function App() {  
 
   return (
 
-    <CategotiasProvider>
+    <CategoriasProvider>
       <Header/>
       <div className="uk-container">
         <Formulario/>
       </div>
-    </CategotiasProvider>
+    </CategoriasProvider>
 
   );
 }
