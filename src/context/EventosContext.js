@@ -6,11 +6,11 @@ export const EventosConsumer = EventosContext.Consumer;
 
 class EventosProvider extends Component {
 
-  token = 'QOPFZLXES25LP34MELGT';
+  token = 'SPAWDQJWXFALXCK6KHVW';
   ordenar = 'date'
 
   state = {
-      eventos : []
+    eventos: []
   }
 
   obtenerEvento = async(busqueda) => {
@@ -18,24 +18,24 @@ class EventosProvider extends Component {
 
     console.log(url);
     // consultar la API con la URL
-    
+
     const eventos = await axios(url)
-  
+
     this.setState({
-      eventos : eventos.data.events
+      eventos: eventos.data.events
     })
 
   }
 
   render() {
-    return (
-        <EventosContext.Provider
-            value={{
-                eventos: this.state.eventos,
-                obtenerEvento: this.obtenerEvento
-            }}>
-            {this.props.children}
-        </EventosContext.Provider>
+    return ( <
+      EventosContext.Provider value = {
+        {
+          eventos: this.state.eventos,
+          obtenerEvento: this.obtenerEvento
+        }
+      } > { this.props.children } <
+      /EventosContext.Provider>
     );
   }
 }
